@@ -27,6 +27,27 @@ If you don't have it or it's not working properly, check the python help at the 
 Don't worry, the bot respects the indicated cooldown between drawings.
 The code is contained in a single file, so you can see that I won't send your credentials anywhere except Reddit's API. Also, there's no self-updating component except it tries to update the `target.png` at every run.
 
+### Using Docker
+0. Make sure Docker is installed.
+
+1. Edit the docker image:
+    
+    Replace `username` with your username.
+    
+    Replace `password` with your password.
+
+2. Build the docker image:
+
+    `docker build -t placestartbot .`
+
+3. Start the bot:
+    `docker run -d -it --rm --name placestartbot placestartbot`
+    
+4. To Stop the bot:
+    `docker stop placestartbot`
+    
+You may need to run the docker commands with admin privileges.
+
 ## Notes
 
 The template file can be updated, the script will automatically pick it up.
